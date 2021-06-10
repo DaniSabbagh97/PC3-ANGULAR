@@ -25,6 +25,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { AuthHeaderInterceptor } from './shared/auth-header.interceptor';
 import { SignupComponent } from './signup/signup.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { SearchExamenComponent } from './search-examen/search-examen.component';
 
 
 
@@ -32,13 +33,14 @@ const appRoutes: Routes = [
   { path: 'app-search', component:SearchComponent},
   //{ path: 'app-estructura/:municipio', component:EstructuraComponent},
   //{ path: 'app-estructura/:ubicacion', component:EstructuraComponent},
-  { path: 'app-estructura/:id', component:EstructuraComponent},
+  { path: 'app-estructura/:municipio', component:EstructuraComponent},
   { path: 'app-navbar', component:NavbarComponent},
   { path: 'app-formulario', component:FormularioComponent},
   { path: 'app-login', component:LoginComponent},
   { path: 'app-estructura', component:EstructuraComponent},
   { path: 'app-article', component:ArticleComponent},
   { path: 'app-signup', component:SignupComponent},
+  { path: 'app-search-examen', component:SearchExamenComponent},
   { path: 'app-usuario', component:UsuarioComponent},
   { path: 'app-board-user', component:BoardUserComponent},
   { path: '', redirectTo : '/app-search', pathMatch: 'full'},
@@ -64,7 +66,8 @@ const appRoutes: Routes = [
     FilterPipe,
     UsuarioComponent,
     SignupComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    SearchExamenComponent
   ],
   imports: [
     BrowserModule,

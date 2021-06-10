@@ -99,4 +99,3 @@ export class SearchComponent implements OnInit {
   @Output('search') searchEmitter = new EventEmitter<string>()
 
 }
-

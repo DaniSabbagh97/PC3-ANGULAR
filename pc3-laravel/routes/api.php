@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 
 
 use App\Models\Localidad;
+use App\Models\Localidad_examen;
 use App\Models\User;
 use App\Models\Alquiler;
 
@@ -83,6 +84,14 @@ Route::put('alquiler/{id}', 'App\Http\Controllers\AlquilerController@update');
 
 //borrar un municipio concreto
 Route::delete('alquiler/{id}', 'App\Http\Controllers\AlquilerController@delete');
+
+//Para el examen
+
+//mostrar las localidades
+Route::get('localidad_examen', 'App\Http\Controllers\Localidad_examenController@index');
+
+//mostrar un municipio concreto
+Route::get('localidad_examen/{municipio}', 'App\Http\Controllers\Localidad_examenController@show');
 
 
 

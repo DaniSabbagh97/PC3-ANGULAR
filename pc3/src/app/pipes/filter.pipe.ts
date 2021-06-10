@@ -8,7 +8,7 @@ export class FilterPipe implements PipeTransform {
   transform(value: any, arg: any): any {
     const resultPosts = [];
     for(const search of value){
-      if(search.ubicacion.toUpperCase().indexOf(arg.toUpperCase()) > -1){
+      if(search.municipio.toUpperCase().indexOf(arg.toUpperCase()) > -1){
          resultPosts.push(search);
       };
     };

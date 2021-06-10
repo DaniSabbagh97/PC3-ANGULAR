@@ -12,6 +12,7 @@ const httpOptions = {
 const urlAlquiler = 'http://127.0.0.1:8000/api/alquiler';
 const urlMunicipios = 'http://127.0.0.1:8000/api/localidad';
 const urlScrapper = 'http://127.0.0.1:8000/api/processData3';
+const urlMunicipios_examen = 'http://127.0.0.1:8000/api/localidad_examen';
 
 @Injectable({
   providedIn: 'root'
@@ -52,13 +53,20 @@ export class AuthService {
     return this.http.get('http://127.0.0.1:8000/api/users');
   }
   getMunicipioId(municipio: string): Observable<any>{
-    return this.http.get(`${urlMunicipios}/${municipio}`);
+    return this.http.get(`${urlMunicipios_examen}/${municipio}`);
   }
   getMunicipio(): Observable<any>{
     return this.http.get(`${urlMunicipios}`);
   }
   getSrapper(municipio: string): Observable<any>{
     return this.http.get(`${urlScrapper}/${municipio}`); 
+  }
+
+  getMunicipioId_Examen(municipio: string): Observable<any>{
+    return this.http.get(`${urlMunicipios_examen}/${municipio}`);
+  }
+  getMunicipio_Examen(): Observable<any>{
+    return this.http.get(`${urlMunicipios_examen}`);
   }
 
 }

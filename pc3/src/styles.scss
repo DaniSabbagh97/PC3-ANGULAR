@@ -31,7 +31,7 @@ body{
     width: 100%;
     background: white;
     border-bottom: 1px solid;
-    border-top: 5px solid #96cc2a;
+    border-top: 5px solid purple;
 }
 
 .center{
@@ -118,14 +118,14 @@ body{
     color: white;
     /*text-shadow: 0px 0px 5px #444;*/
     font-size: 26px;
-    background: #dbff93;
+    background: #fb93ff;
 
     /* DEGRADADO CSS*/
 
-background: rgba(249,255,82,1);
-background: -moz-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+background: rgb(220, 82, 255);
+background: -moz-linear-gradient(left, rgb(241, 82, 255) 0%, rgb(234, 66, 226) 79%, rgba(184,231,64,1) 91%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,255,82,1)), color-stop(79%, rgba(193,234,66,1)), color-stop(91%, rgba(184,231,64,1)));
-background: -webkit-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+background: -webkit-linear-gradient(left, rgb(148, 82, 255) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: -o-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: -ms-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: linear-gradient(to right, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
@@ -142,7 +142,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', end
 
 .btn-white{
     display: block;
-    background: white;
+    background: rgb(255, 255, 255);
     color: black;
     padding: 10px;
     width: 100px;
@@ -161,7 +161,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', end
 
 .btn-white:hover{
 
-    background: rgb(109, 228, 80);/*CAMBIAR HOVER*/
+    background: rgb(228, 80, 216);/*CAMBIAR HOVER*/
     color: white;
 
 }
@@ -196,12 +196,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', end
 }
 
 .btn-success{
-    background:#96cc2a;/*CAMBIAR HOVER*/
+    background:#bf2acc;/*CAMBIAR HOVER*/
 
 }
 .btn-success:hover{
 
-    background: rgb(46, 219, 89);/*CAMBIAR HOVER*/
+    background: rgb(219, 46, 176);/*CAMBIAR HOVER*/
 }
 
 input[type="text"]{

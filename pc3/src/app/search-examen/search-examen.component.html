@@ -1,0 +1,23 @@
+<!--Creación del buscador y creación del botón-->
+<div id="slider" class="slider-big">
+<div class="buscado">
+<mat-form-field> 
+    <input [formControl]="search" matInput placeholder="Buscador" [(ngModel)]="filterpost"/>
+</mat-form-field>
+<!--<div class="btn" click="getMunicipio()">Probando</div>-->
+</div>
+</div>
+<table class="table table-bordered">
+    <tbody>
+      <tr *ngFor="let local of ltsLocalidad | filter: filterpost">
+        <td>{{ local.municipio }}</td>
+        <td>{{ local.comarca }}</td>
+        <td>{{ local.provincia }}</td>
+        
+        <td><button (click)= "verAlquileres(local.municipio)">Pulse aqui</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
