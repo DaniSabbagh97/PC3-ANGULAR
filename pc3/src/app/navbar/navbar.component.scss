@@ -4,7 +4,7 @@
     width: 100%;
     background: white;
     border-bottom: 1px solid;
-    border-top: 5px solid #96cc2a;
+    border-top: 5px solid white;
 }
 
 .center{
@@ -52,8 +52,7 @@
     width: 50%;
     min-height: 450px;
     margin: 0px auto;
-    font-family: Roboto;
-
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #menu {
@@ -85,7 +84,7 @@
 }
 
 #menu a:hover{
-    color: #99c546
+    color: #395AFF;
 }
 
 #slider{
@@ -96,7 +95,7 @@
     color: white;
     text-shadow: 0px 0px 5px #444;
     font-size: 26px;
-    background: #dbff93;
+    background: black;
 
     /* DEGRADADO CSS*/
 

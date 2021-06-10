@@ -1,0 +1,28 @@
+.boton{
+    height: 10%;
+    //position: absolute;
+    //bottom: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.buscado{
+    text-align: center;
+}
+
+.table{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+}
+#nombre{
+    font-family: 'Times New Roman', Times, serif;
+    color: #23378F;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+    color: #23378F !important;
+   }
+#buscadorcheck{
+    color: black;
+}
