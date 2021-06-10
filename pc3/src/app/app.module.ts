@@ -25,6 +25,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { AuthHeaderInterceptor } from './shared/auth-header.interceptor';
 import { SignupComponent } from './signup/signup.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { BuscadorexamenComponent } from './buscadorexamen/buscadorexamen.component';
 
 
 
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'app-signup', component:SignupComponent},
   { path: 'app-usuario', component:UsuarioComponent},
   { path: 'app-board-user', component:BoardUserComponent},
+  { path: 'app-buscadorexamen', component:BuscadorexamenComponent},
   { path: '', redirectTo : '/app-search', pathMatch: 'full'},
   { path: '', redirectTo : '/app-users', pathMatch: 'full'},
   { path: '', redirectTo : '/app-login', pathMatch: 'full'},
@@ -64,7 +66,8 @@ const appRoutes: Routes = [
     FilterPipe,
     UsuarioComponent,
     SignupComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    BuscadorexamenComponent
   ],
   imports: [
     BrowserModule,

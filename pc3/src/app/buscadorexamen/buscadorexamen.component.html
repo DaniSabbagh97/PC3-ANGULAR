@@ -1,0 +1,54 @@
+<!--Creación del buscador y creación del botón-->
+<div id="sliderExamen">
+    <div class="buscado">
+    <mat-form-field> 
+        <input [formControl]="search" matInput placeholder="Buscador" [(ngModel)]="filterpost"
+        (keydown.enter) = "getMunicipio()" name="filterpost"/>
+    </mat-form-field>
+    <div class="btn btn-danger" click="getUsuariosExamen()">Mostrar datos Usuario</div>
+    </div>
+    </div>
+    <div class="container">
+      <table class="table table-bordered">
+        <tbody>
+          <tr *ngFor="let alq of ltsAlquiler | filter: filterpost">
+            <td><img src="{{alq.fotos}}"></td>
+            <td>{{ alq.nombre }}</td>
+            <td>{{ alq.ubicacion }}</td>
+            <td>{{ alq.coste }}</td>
+            <td>{{ alq.especificaciones }}</td>
+            <td><button (click)= "verAlquileres(alq.id)">Pulse aqui</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <!--<table class="table table-bordered">
+        <tbody>
+          <tr *ngFor="let local of ltsLocalidad | filter: filterpost">
+            <td>{{ local.municipio }}</td>
+            <td>{{ local.comarca }}</td>
+            <td>{{ local.provincia }}</td>
+            <td>{{ local.CCAA }}</td>-->
+            <!--<td *ngFor="let alq of ltsAlquiler">-->
+            <!--<td><button (click)= "verAlquileres(local.municipio)">Pulse aqui</button></td>
+          </tr>
+        </tbody>
+      </table>-->
+    </div>
+    <div class="container">
+      <table class="table table-bordered">
+        <tbody>
+          <tr *ngIf="this.localidad.municipio != null">
+            <td>{{this.localidad.municipio}}</td>
+            <td>{{this.localidad.comarca}}</td>
+            <td>{{this.localidad.provincia}}</td>
+            <td>{{this.localidad.CCAA}}</td>
+            <!--<td>{{this.numeroVaciada}}</td>-->
+          </tr>
+          <tr *ngIf="this.user.name != null">
+             <td>{{this.user.name}}</td>
+             <td>{{this.user.email}}</td>
+            <!--<td>{{this.numeroVaciada}}</td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
