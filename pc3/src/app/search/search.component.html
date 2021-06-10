@@ -3,7 +3,7 @@
 <div class="buscado">
 <mat-form-field> 
     <input [formControl]="search" matInput placeholder="Buscador" [(ngModel)]="filterpost"
-    (keydown.enter) = "getMunicipio()" name="filterpost"/>
+    (keydown.enter) = "getScrapper()" (keydown.enter) = "getMunicipio()" name="filterpost"/>
 </mat-form-field>
 <!--<div class="btn" click="getMunicipio()">Probando</div>-->
 </div>
@@ -42,7 +42,7 @@
         <td>{{this.localidad.comarca}}</td>
         <td>{{this.localidad.provincia}}</td>
         <td>{{this.localidad.CCAA}}</td>
-        <!--<td>{{this.numeroVaciada}}</td>-->
+        <td>{{this.numeroVaciada}}</td>
       <tr>
     </tbody>
   </table>

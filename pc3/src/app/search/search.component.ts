@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
 
   filterpost = '';
   localidad = new Localidad();
-  numeroVaciada = 2;
+  numeroVaciada = '';
 
   constructor(private data: AuthService, 
     private route: ActivatedRoute, 
@@ -88,9 +88,9 @@ export class SearchComponent implements OnInit {
   }*/
 
   getScrapper(): void{
-    console.log(this.data)
     this.data.getSrapper(this.filterpost).subscribe(res => {
       this.numeroVaciada = res;
+      console.log(this.numeroVaciada)
     })
   }
 

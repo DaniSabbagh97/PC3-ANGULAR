@@ -58,7 +58,7 @@ export class AuthService {
     return this.http.get(`${urlMunicipios}`);
   }
   getSrapper(municipio: string): Observable<any>{
-    return this.http.get(`${urlScrapper}/${municipio}`); 
+    return this.http.get(`${urlScrapper}/${municipio}`, {responseType: 'text'}); 
   }
 
 }
