@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './component/app.component';
 import { SearchComponent } from './search/search.component';
+import { ExamenSearchComponent } from './examensearch/examensearch.component';
 
 /*Angular material*/
 
@@ -28,6 +29,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 
 
 
+
 const appRoutes: Routes = [
   { path: 'app-search', component:SearchComponent},
   //{ path: 'app-estructura/:municipio', component:EstructuraComponent},
@@ -35,6 +37,7 @@ const appRoutes: Routes = [
   { path: 'app-estructura/:id', component:EstructuraComponent},
   { path: 'app-navbar', component:NavbarComponent},
   { path: 'app-formulario', component:FormularioComponent},
+  { path: 'app-examensearch', component:ExamenSearchComponent},
   { path: 'app-login', component:LoginComponent},
   { path: 'app-estructura', component:EstructuraComponent},
   { path: 'app-article', component:ArticleComponent},
@@ -55,6 +58,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
+    ExamenSearchComponent,
     UsersComponent,
     NavbarComponent,
     LoginComponent,
@@ -64,7 +68,7 @@ const appRoutes: Routes = [
     FilterPipe,
     UsuarioComponent,
     SignupComponent,
-    BoardUserComponent
+    BoardUserComponent,
   ],
   imports: [
     BrowserModule,
