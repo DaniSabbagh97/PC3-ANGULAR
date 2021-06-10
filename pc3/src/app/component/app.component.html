@@ -1,0 +1,23 @@
+<!--<nav class="navbar navbar-expand-sm">
+  <a class="nav-link" routerLink="/app-search" routerLinkActive="activebutton">Silent Life</a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/app-users" routerLinkActive="activebutton">Quienes somos</a>
+              </li>
+            </ul>
+</nav>-->
+<app-navbar></app-navbar>
+<div>
+  <!--<app-users></app-users>-->
+</div>
+
+  <div class="center">
+  <!--<app-search (search)="handleSearch($event)"></app-search>-->
+  <!--Creación de una lista para las búsquedas recientes-->
+  <div class="reciente">
+  <ul>
+    <!--<li *ngFor="let usuario of usuarios">{{ usuarios }}</li>-->
+  </ul>
+  </div>
+  </div>
+<router-outlet></router-outlet>

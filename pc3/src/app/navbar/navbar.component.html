@@ -1,0 +1,41 @@
+<header id="header">
+  <div class="center">
+      <!--LOGO-->
+      <div id="logo">
+              <img src="/assets/images/logo.png" class="logo-app" alt="logotipo"/>
+              <span id="brand"></span>
+          </div>
+          
+          
+      <!--MENU-->
+      <nav id="menu" style="min-width: 100px;" >
+          <ul>
+              <li>
+                  <a routerLink="/app-search">Inicio</a>
+              </li>
+              <li>
+                  <a routerLink="/app-users">Blog</a>
+              </li>
+              <li>
+                  <a routerLink="/app-estructura">Alquilieres</a>
+              </li>
+          
+              <li class="nav-item" *ngIf="!isLoggedIn">
+                <a href="/app-signup" class="nav-link" routerLink="app-signup">Registro</a>
+              </li>
+              <li class="nav-item" *ngIf="!isLoggedIn">
+                <a href="/app-login" class="nav-link" routerLink="app-login">Login</a>
+              </li>
+            
+              <li class="nav-item" *ngIf="isLoggedIn">
+                <a href="/app-usuario" class="nav-link" routerLink="app-usuario">{{ name }}</a>
+              </li>
+              <li class="nav-item" *ngIf="isLoggedIn">
+                <a href class="nav-link" (click)="logout()">LogOut</a>
+              </li>
+            </ul>
+      </nav>
+      <!--LIMPIAR FLOTADOS-->
+      <div class="clearfix"></div>
+  </div>
+</header>

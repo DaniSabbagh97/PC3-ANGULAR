@@ -1,0 +1,46 @@
+ <!--<div *ngFor="let usr of users">
+    <h1>Mi perfil</h1>
+    <img src= "{{ usr.profile_photo_path }}">-->
+    <!--{ user.profile_photo_path }-->
+    <!--<h2>{{ usr.name }}</h2>
+</div>
+<div *ngFor="let usr of users">
+    <h2>Información</h2>
+    <ul>
+            <p>Nombre: {{ usr.name }}</p>
+
+            <p>Email: {{ usr.email }}</p>
+            
+            <p>Fecha creación: {{ usr.created_at }}</p>
+
+            <p>Fecha verificación email: {{ usr.email_verified_at }}</p>
+
+            <p>Fecha última actualización: {{ usr.updated_at }}</p>
+    </ul>
+</div>-->
+<div class="container" *ngIf="currentUser; else loggedOut">
+    <header class="jumbotron">
+      <h3>
+        <strong>{{ currentUser.username }}</strong> Profile
+      </h3>
+    </header>
+    <p>
+      <strong>Token:</strong>
+      {{ currentUser.accessToken.substring(0, 20) }} ...
+      {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+    </p>
+    <p>
+      <strong>Email:</strong>
+      {{ currentUser.email }}
+    </p>
+    <strong>Roles:</strong>
+    <ul>
+      <li *ngFor="let role of currentUser.roles">
+        {{ role }}
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #loggedOut>
+    Please login.
+  </ng-template>

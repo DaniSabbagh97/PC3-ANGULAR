@@ -1,0 +1,79 @@
+body{
+  overflow: hidden;
+}
+
+
+#forma label{
+  font-size: 25px;
+
+  color:green;
+
+
+}
+#forma input[type=text], input[type=password] {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+  border: none;
+  background: #f1f1f1;
+}
+
+.vh{
+  margin-top: 42vh;
+
+}
+
+
+
+#forma input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  
+
+}
+
+.vh{
+  margin-top: 42vh;
+  background: #f7f7f7;
+  
+}
+
+button{
+  
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover{
+  opacity: 1;
+
+}
+
+#degradado{
+  /* DEGRADADO CSS*/
+
+background: rgba(249,255,82,1);
+background: -moz-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,255,82,1)), color-stop(79%, rgba(193,234,66,1)), color-stop(91%, rgba(184,231,64,1)));
+background: -webkit-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+background: -o-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+background: -ms-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+background: linear-gradient(to right, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', endColorstr='#b8e740', GradientType=1 );
+    
+}
+
+
+
+

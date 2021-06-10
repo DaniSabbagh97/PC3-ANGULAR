@@ -1,0 +1,117 @@
+
+  <div id="degradado">
+    <div class="container col-md-4"  >
+      <img
+        id="profile-img"
+        src="/assets/images/Registro.png"
+        class="profile-img-card"
+      />
+      <form id="forma"
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+      >
+        <div class="form-group prb">
+          <label for="name">User</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            [(ngModel)]="form.name"
+            required="required"
+            minlength="3"
+            maxlength="20"
+            #name="ngModel"
+          />
+          <div class="alert-danger" *ngIf="name.errors && f.submitted">
+            <div *ngIf="name.errors.required">El usuario es requerido</div>
+            <div *ngIf="name.errors.minlength">
+              El usuario debe ser mayor de 3 caracteres
+            </div>
+            <div *ngIf="name.errors.maxlength">
+             El usuario debe tener menos de 20 caracteres
+            </div>
+          </div>
+        </div>
+        <div class="form-group prb">
+          <label for="email"  >Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="form.email"
+            required="required"
+            email
+            #email="ngModel"
+          />
+          <div class="alert-danger" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors.required">El Email es un campo requerido</div>
+            <div *ngIf="email.errors.email">
+              El Email debe mantener una estructura válida
+            </div>
+          </div>
+        </div>
+        <div class="form-group prb">
+          <label for="password" >Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            [(ngModel)]="form.password"
+            required="required"
+            minlength="6"
+            #password="ngModel"
+          />
+          <div class="alert-danger" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors.required">La contraseña es requerida</div>
+            <div *ngIf="password.errors.minlength">
+              La contraseña debe ser de al menos 6 caracteres
+            </div>
+          </div>
+        </div>
+        <div class="form-group prb">
+          <label for="password_confirmation">Confirma Contraseña</label>
+          <input
+            type="password_confirmation"
+            class="form-control"
+            name="password_confirmation"
+            [(ngModel)]="form.password_confirmation"
+            required="required"
+            minlength="6"
+            #password_confirmation="ngModel"
+          />
+          <div class="alert-danger" *ngIf="password_confirmation.errors && f.submitted">
+            <div *ngIf="password_confirmation.errors.required">La contraseña es un campo requerido</div>
+            <div *ngIf="password_confirmation.errors.minlength">
+              La contraseña debe ser de al menos 6 caracteres
+            </div>
+          </div>
+        </div>
+        <div class="form-group prb">
+          <button class="btn btn-primary btn-block">Registro</button>
+        </div>
+  
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          ¡Registro Fallido!<br />{{ errorMessage }}
+        </div>
+  
+      </form>
+      <div class="row"></div>
+      <div class="row"></div>
+      
+  
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        ¡Se ha registrado correctamente!
+      </div>
+      
+    </div>
+  </div>
+    <footer id="footer" class="vh">
+      <div class="center">
+          <p> 
+              &copy; Silent Life S.L.
+          </p>
+      </div>
+  </footer>
+  

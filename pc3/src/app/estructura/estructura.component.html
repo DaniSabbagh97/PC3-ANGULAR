@@ -1,0 +1,89 @@
+<script src="assets/codigo2.js" type="text/javascript"></script>
+<script>
+    /* Gestión del carrusel (img ID: album) */
+    var currentImage = 0;
+    var numeroImagenes = 5;
+    var timer = setInterval(siguiente, 3500);
+    
+    // Se añaden manejadores de eventos a los botones
+    document.getElementById("izquierda").addEventListener("click", function(){
+        anterior();
+    });
+    document.getElementById("derecha").addEventListener("click", function(){
+        siguiente();
+    });
+    
+    function changeImage() {
+        document.getElementById("album").src =
+        "assets/img/carrusel/"+currentImage + ".jpg";
+    }
+    
+    function siguiente() {
+        // Tenemos X imagenes, de la 0 a la X-1
+        currentImage = (currentImage + 1) % numeroImagenes;
+        changeImage();
+    }
+    function anterior() {
+        // Tenemos X imagenes, de la 0 a la X-1
+        currentImage--;
+        if (currentImage<0) {
+            currentImage = numeroImagenes-1;
+        }
+        changeImage();
+    }
+    </script>
+        <script type="text/javascript">
+            window.addEventListener("load", function(){
+                var template = document.getElementById("article-template");
+                
+                var articles = document.getElementById("articles");
+
+                for(var i = 0; i <=5; i++){
+                    var clonar = template.cloneNode(true);
+                    var h2 = clonar.getElementsByTagName("h2")[0];
+                    h2.innerHTML = h2.textContent + ' ' + i;
+                    articles.appendChild(clonar);
+                }
+            });
+        </script>
+<div id="slider" class="slider-big">
+    <h1>Bienvenido a Silent Life</h1>
+    <a href="/app-formulario" class="btn-white">Formulario</a>
+</div>
+<div id="carrusel">
+ <img src="assets/img/carrusel/0.jpg" id="album" width="70%">
+
+
+
+</div>
+
+<section id="content">
+     <h1 class="subheader">Te ofrecemos las mejores ofertas</h1>
+</section>
+
+<!--Para ver los alquileres en app-estructura-->
+<div *ngIf="alquiler$ | async as alq">
+    <table class="table table-bordered">
+      <tbody>
+          <td><img src="{{ alq.fotos }}"></td>
+          <td>{{ alq.nombre }}</td>
+          <td>{{ alq.descripcion }}</td>
+          <td>{{ alq.ubicacion }}</td>
+          <td>{{ alq.coste }}</td>
+      </tbody>
+    </table>
+  </div>
+<!--Para ver las localidades en la pagina de app-estructura-->
+<!--<div class="container" *ngIf="localidad$ | async as local">
+    <table class="table table-bordered">
+      <tbody>
+          <td>{{ local.municipio }}</td>
+          <td>{{ local.comarca }}</td>
+          <td>{{ local.provincia }}</td>
+          <td>{{ local.CCAA }}</td>
+          <td>{{ local.poblacion }}</td>
+          <td>{{ local.densidad }}</td>
+      </tbody>
+    </table>
+  </div>-->
+  

@@ -1,0 +1,39 @@
+form label {
+    margin-top: 0.2px;
+    padding: 0px;
+    text-align: center;
+    text-align: justify;
+    padding-top: 138px;
+    font-size: 17px;
+
+}
+
+form select{
+    background: transparent;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px
+}
+
+form input{
+    
+    display: block;
+    background: white;
+    color: black;
+    padding: 10px;
+    margin: 0px auto;
+    font-size: 11px;
+    text-shadow: none;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
+    margin-top: 80px;
+    border-radius: 4px;
+}
+
+form input:hover{
+    background: rgb(109, 228, 80);/*CAMBIAR HOVER*/
+    color: white;
+}
