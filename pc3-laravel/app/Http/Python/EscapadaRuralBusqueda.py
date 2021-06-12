@@ -8,7 +8,7 @@ cur = myconn.cursor()
 
 
 sql = "insert into alquileres (nombre, descripcion, fotos, ubicacion, coste, especificaciones) values (%s, %s, %s, %s, %s, %s)"
-ciudad = "galicia"
+ciudad = "cataluña"
 page = requests.get('https://www.escapadarural.com/casas-rurales?l=',ciudad)
 soup = BeautifulSoup (page.content, 'html.parser')
 #print(soup.prettify())
@@ -27,7 +27,7 @@ for i in article:
     print(totalImg) #TODO GUARDAR IMAGEN
     for a in h3:
         quitar = a.text
-        sinEspacio = re.sub(r'(\s)', '',quitar)
+        sinEspacio = re.sub(r'(\s\s*)', ' ',quitar)
         print("Vivienda:",sinEspacio)#TODO GUARDAR H3
 
     for b in h4:
@@ -35,16 +35,16 @@ for i in article:
         print("Lugar: "+lugar)#TODO GUARDAR LUGAR
     for c in descripcion:
         quitar2 = c.text
-        sinEspacio2 = re.sub(r'(\s)', '', quitar2)
+        sinEspacio2 = re.sub(r'(\s\s*)', ' ', quitar2)
         print("Descripcion:",sinEspacio2)#TODO GUARDAR H4
     for d in precio:
         precioSinRegEx = d.text
-        precioConRegEx = re.sub(r'(\s)','', precioSinRegEx)
+        precioConRegEx = re.sub(r'(\s\s*)',' ', precioSinRegEx)
         print("Precio: "+precioConRegEx)#TODO GUARDAR PRECIO
     print("Especificaciones:")
     for e in especificaciones:
         datosSinRegEx = e.text
-        datosConRegEx = re.sub(r'(\s)', '', datosSinRegEx)
+        datosConRegEx = re.sub(r'(\s\s*)', ' ', datosSinRegEx)
         print(datosConRegEx+", ")#TODO GUARDAR ESPEXIFICACIONES
     # listaH3 = []
     # listaH3.append(sinEspacio)

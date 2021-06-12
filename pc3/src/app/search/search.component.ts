@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
 
   filterpost = '';
   localidad = new Localidad();
+  alquiler = new Alquiler();
   numeroVaciada = '';
 
   constructor(private data: AuthService, 
@@ -60,10 +61,10 @@ export class SearchComponent implements OnInit {
       console.log(data_);
     })
   }
-  getAlquilerUbi(ubicacion:any): void{
-    this.data.getAlquilerUbi(ubicacion).subscribe(data_ => {
-      this.currentAlquiler = data_;
-      console.log(data_);
+  getAlquilerUbi(): void{
+    this.data.getAlquilerUbi(this.filterpost).subscribe(res => {
+      this.alquiler = res;
+      console.log(this.alquiler);
     })
   }
   // getMunicipio(municipio:any): void{
@@ -80,8 +81,8 @@ export class SearchComponent implements OnInit {
     //   console.log(data_);
     })
   }
-  verAlquileres(id: string){
-    this.router_.navigate(["/app-estructura", id]);
+  verAlquileres(){
+    this.router_.navigate(["/app-estructura", this.filterpost]);
   }
   /*verAlquileres(id: string){
     this.router_.navigate(["/app-estructura", id]);

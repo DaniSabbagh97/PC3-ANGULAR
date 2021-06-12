@@ -22,7 +22,7 @@ export class EstructuraComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.pipe(take(1)).subscribe((params) => {
-      const ubicacion = params['ubicacion'];
+      const ubicacion = params['municipio'];
       this.alquilerUbi$ = this.authService.getAlquilerUbi(ubicacion);
     })
     this.route.params.pipe(take(1)).subscribe((params) => {

@@ -70,7 +70,7 @@ Route::delete('localidad/{municipio}', 'App\Http\Controllers\LocalidadController
 Route::get('alquiler', 'App\Http\Controllers\AlquilerController@index');
 
 //mostrar un municipio concreto
-Route::get('alquiler/{id}', 'App\Http\Controllers\AlquilerController@show');
+//Route::get('alquiler/{nombre}', 'App\Http\Controllers\AlquilerController@show');
 
 //mostrar un municipio concreto
 Route::get('alquiler/{ubicacion}', 'App\Http\Controllers\AlquilerController@show_ubi');
