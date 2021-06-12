@@ -19,7 +19,7 @@ class AlquilerController extends Controller
     }
     public function show_ubi($alquiler)
     {
-        $alquiler = Alquiler::where('ubicacion', $alquiler)->pluck('nombre')->all();
+        $alquiler = Alquiler::where('ubicacion', $alquiler)->get();
         return $alquiler;
     }
 

@@ -81,8 +81,8 @@ export class SearchComponent implements OnInit {
     //   console.log(data_);
     })
   }
-  verAlquileres(){
-    this.router_.navigate(["/app-estructura", this.filterpost]);
+  verAlquileres(id: string){
+    this.router_.navigate(["/app-estructura", id]);
   }
   /*verAlquileres(id: string){
     this.router_.navigate(["/app-estructura", id]);

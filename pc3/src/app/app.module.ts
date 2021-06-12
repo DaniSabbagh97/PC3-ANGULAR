@@ -31,8 +31,8 @@ import { BoardUserComponent } from './board-user/board-user.component';
 const appRoutes: Routes = [
   { path: 'app-search', component:SearchComponent},
   //{ path: 'app-estructura/:municipio', component:EstructuraComponent},
-  //{ path: 'app-estructura/:ubicacion', component:EstructuraComponent},
   { path: 'app-estructura/:id', component:EstructuraComponent},
+  //{ path: 'app-estructura/:id', component:EstructuraComponent},
   { path: 'app-navbar', component:NavbarComponent},
   { path: 'app-formulario', component:FormularioComponent},
   { path: 'app-login', component:LoginComponent},
