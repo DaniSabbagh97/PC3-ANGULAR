@@ -9,9 +9,9 @@ cur = myconn.cursor()
 
 sql = "insert into alquileres (nombre, descripcion, fotos, ubicacion, coste, especificaciones) values (%s, %s, %s, %s, %s, %s)"
 
-provincia = "valladolid"#TODO SEÑALAR CIUDAD
-ciudad = "medina-del-campo"#TODO SEÑALAR PROVINCIA, no es necesario
-page = requests.get('https://www.spainhouses.net/es/'+ciudad+'/'+provincia)
+#provincia = "valladolid"#TODO SEÑALAR CIUDAD
+ciudad = "getafe"#TODO SEÑALAR PROVINCIA, no es necesario
+page = requests.get('https://www.spainhouses.net/es/'+ciudad)#+'/'+provincia)
 soup = BeautifulSoup(page.content, 'html.parser')
 #print(soup.prettify())
 html = list(soup.children)[1]
@@ -52,13 +52,17 @@ for i in article:
         print("Telefono: "+telefono)
     links = list(i.findAll('link', attrs={'href':True}))
     for e in links:#TODO GUARDARLISTA DE IMAGENES
-        listaImagenes = (e['href']+",")
+        try:
+            listaImagenes = (e['href']+",")
+            listaImagenesComa = listaImagenes.replace(",","")
+        except:
+            listaImagenes = 'Null'
         print(listaImagenes)
-    val = (lugarCiudad, descripcion, listaImagenes, lugarCiudad, precio, telefono+","+metrosCuadrados+","+precioPorm2)  # TODO SOLO EN UN INSERT
+    val = (lugarCiudad, descripcion, listaImagenesComa, lugarCiudad, precio, telefono+","+metrosCuadrados+","+precioPorm2)  # TODO SOLO EN UN INSERT
     try:
-        # inserting the values into the table
+
         cur.execute(sql, val)
-        # commit the transaction
+
         myconn.commit()
 
     except:
