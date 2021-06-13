@@ -13,13 +13,6 @@
               <li>
                   <a routerLink="/app-search">Inicio</a>
               </li>
-              <li>
-                  <a routerLink="/app-users">Blog</a>
-              </li>
-              <li>
-                  <a routerLink="/app-estructura">Alquilieres</a>
-              </li>
-          
               <li class="nav-item" *ngIf="!isLoggedIn">
                 <a href="/app-signup" class="nav-link" routerLink="app-signup">Registro</a>
               </li>
@@ -32,6 +25,9 @@
               </li>
               <li class="nav-item" *ngIf="isLoggedIn">
                 <a href class="nav-link" (click)="logout()">LogOut</a>
+              </li>
+              <li class="nav-item">
+                <a href="/app-usuario" class="nav-link" *ngIf="isLoggedIn" routerLink="app-usuario">User</a>
               </li>
             </ul>
       </nav>

@@ -63,8 +63,8 @@ export class SearchComponent implements OnInit {
   }
   getAlquilerUbi(): void{
     this.data.getAlquilerUbi(this.filterpost).subscribe(res => {
-      this.alquiler = res;
-      console.log(this.alquiler);
+      this.ltsAlquiler = res;
+      console.log(this.ltsAlquiler);
     })
   }
   // getMunicipio(municipio:any): void{
@@ -82,7 +82,7 @@ export class SearchComponent implements OnInit {
     })
   }
   verAlquileres(id: string){
-    this.router_.navigate(["/app-estructura", id]);
+    this.router_.navigate(["/app-article", id]);
   }
   /*verAlquileres(id: string){
     this.router_.navigate(["/app-estructura", id]);

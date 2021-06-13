@@ -18,6 +18,8 @@ export class EstructuraComponent implements OnInit {
   alquilerUbi$: Observable<Alquiler> | undefined;
 
 
+
+
   constructor(private route: ActivatedRoute, private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -28,6 +30,7 @@ export class EstructuraComponent implements OnInit {
     this.route.params.pipe(take(1)).subscribe((params) => {
       const id = params['id'];
       this.alquiler$ = this.authService.getAlquilerId(id);
+      console.log(this.alquiler$)
     })
     this.route.params.pipe(take(1)).subscribe((params) => {
       const municipio = params['municipio'];

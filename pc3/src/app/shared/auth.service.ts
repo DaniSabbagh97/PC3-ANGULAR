@@ -9,6 +9,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+const urlAlquilerUbi = 'http://127.0.0.1:8000/api/alquiler/ubi';
 const urlAlquiler = 'http://127.0.0.1:8000/api/alquiler';
 const urlMunicipios = 'http://127.0.0.1:8000/api/localidad';
 const urlScrapper = 'http://127.0.0.1:8000/api/processData3';
@@ -45,7 +46,7 @@ export class AuthService {
   }
 
   getAlquilerUbi(ubicacion: string): Observable<any> {
-    return this.http.get(`${urlAlquiler}/${ubicacion}`);
+    return this.http.get(`${urlAlquilerUbi}/${ubicacion}`);
   }
 
   getUsers(): Observable<any> {

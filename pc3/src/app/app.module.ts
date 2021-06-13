@@ -31,8 +31,8 @@ import { BoardUserComponent } from './board-user/board-user.component';
 const appRoutes: Routes = [
   { path: 'app-search', component:SearchComponent},
   //{ path: 'app-estructura/:municipio', component:EstructuraComponent},
-  { path: 'app-estructura/:id', component:EstructuraComponent},
-  //{ path: 'app-estructura/:id', component:EstructuraComponent},
+  //{ path: 'app-estructura/:ubicacion', component:EstructuraComponent},
+  { path: 'app-article/:id', component:ArticleComponent},
   { path: 'app-navbar', component:NavbarComponent},
   { path: 'app-formulario', component:FormularioComponent},
   { path: 'app-login', component:LoginComponent},
@@ -47,7 +47,6 @@ const appRoutes: Routes = [
   { path: '', redirectTo : '/app-estructura', pathMatch: 'full'},
   { path: '', redirectTo : '/app-article', pathMatch: 'full'},
   { path: '', redirectTo : '/app-formulario', pathMatch: 'full'},
-  { path: '', redirectTo : '/app-usuario', pathMatch: 'full'},
   { path: '', redirectTo : '/app-board-user', pathMatch: 'full'},
   { path: '', redirectTo : '/app-signup', pathMatch: 'full'}
 ];
