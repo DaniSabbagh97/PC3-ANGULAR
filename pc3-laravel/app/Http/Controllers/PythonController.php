@@ -39,8 +39,8 @@ class PythonController extends Controller
     //  * @return \Illuminate\Http\Response
     //  */
 
-    // public function processData2()
-    // {
+     public function processData2()
+    {
 
     //     //$python = "C:\Users\Dani\AppData\Local\Programs\Python\Python37\python.exe";//Cambiar python a ruta relativa y meterlo en el proyecto
     //     $pythonDavid = "C:\Users\david\AppData\Local\Microsoft\WindowsApps\python3.8.exe"
@@ -51,16 +51,13 @@ class PythonController extends Controller
     //             base_path('app\python\vaciada.py')
 
     //         ]);
-    //     $process->run();
-    //     //dd($process);
-    //     if (!$process->isSuccessful()) {
-    //         throw new ProcessFailedException($process);
-    //     }
+    $pythonDavid ="C:\Users\sandr\AppData\Local\Programs\Python\Python39\python.exe";
+    $cmd =$pythonDavid." ".base_path("app/Http/Python/SpainHousesBusqueda.py").' ' . $municipio;
+    
+    $ans = shell_exec($cmd);
 
-    //     return response()->json($process->getOutput(), JsonResponse::HTTP_OK);
-
-
-    // }
+    return $ans;
+ }
 
     public function processData3($municipio)
     {

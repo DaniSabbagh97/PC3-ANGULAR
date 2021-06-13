@@ -102,6 +102,12 @@ export class SearchComponent implements OnInit {
       console.log(this.controlador)
     })
   }
+  getScrapper3(): void{
+    this.data.getSrapper3(this.filterpost).subscribe(res => {
+      this.controlador = res;
+      console.log(this.controlador)
+    })
+  }
 
   search = new FormControl('')
 

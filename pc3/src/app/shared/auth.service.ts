@@ -14,7 +14,7 @@ const urlAlquiler = 'http://127.0.0.1:8000/api/alquiler';
 const urlMunicipios = 'http://127.0.0.1:8000/api/localidad';
 const urlScrapper = 'http://127.0.0.1:8000/api/processData3';
 const urlScrapper2 = 'http://127.0.0.1:8000/api/processData';
-
+const urlScrapper3 = 'http://127.0.0.1:8000/api/processData2';
 @Injectable({
   providedIn: 'root'
 })
@@ -64,6 +64,9 @@ export class AuthService {
   }
   getSrapper2(ciudad: string): Observable<any>{
     return this.http.get(`${urlScrapper2}/${ciudad}`, {responseType: 'text'}); 
+  }
+  getSrapper3(ciudad: string): Observable<any>{
+    return this.http.get(`${urlScrapper3}/${ciudad}`, {responseType: 'text'}); 
   }
 
 }
