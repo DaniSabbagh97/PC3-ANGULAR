@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
   localidad = new Localidad();
   alquiler = new Alquiler();
   numeroVaciada = '';
+  controlador = '';
 
   constructor(private data: AuthService, 
     private route: ActivatedRoute, 
@@ -92,6 +93,13 @@ export class SearchComponent implements OnInit {
     this.data.getSrapper(this.filterpost).subscribe(res => {
       this.numeroVaciada = res;
       console.log(this.numeroVaciada)
+    })
+  }
+
+  getScrapper2(): void{
+    this.data.getSrapper2(this.filterpost).subscribe(res => {
+      this.controlador = res;
+      console.log(this.controlador)
     })
   }
 

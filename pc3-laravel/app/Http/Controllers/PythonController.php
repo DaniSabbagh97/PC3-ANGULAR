@@ -18,20 +18,20 @@ class PythonController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    // public function processData()
-    // {
+       public function processData($ciudad)
+       {
 
     //     $python = "C:\Users\sandr\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.9\Python 3.9.exe"
     //     //$python = "C:\Users\Dani\AppData\Local\Programs\Python\Python39\python.exe";//Cambiar python a ruta relativa y meterlo en el proyecto
     //     $cmd = $python." ".'D:\PCII y PCIII\proyecto\PC3-ANGULAR\pc3-laravelDISCOD\app\Python\prueba.py';
     //     //D:\PCII y PCIII\proyecto\PC3-ANGULAR\pc3-laravelDISCOD\app\Python\prueba.py
-    //     $ans = shell_exec($cmd);
-    //     dd(shell_exec($cmd), $cmd);
+         $pythonDavid ="C:\Users\sandr\AppData\Local\Programs\Python\Python39\python.exe";
+         $cmd =$pythonDavid." ".base_path("app/Http/Python/EscapadaRuralBusqueda.py").' ' . $ciudad;
+         $ans = shell_exec($cmd);
+         return $ans;
 
-    //     return response()->json($ans, JsonResponse::HTTP_OK);
 
-
-    // }
+      }
 
     // /**
     //  * Solicitar

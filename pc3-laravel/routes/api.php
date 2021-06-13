@@ -89,7 +89,7 @@ Route::delete('alquiler/{id}', 'App\Http\Controllers\AlquilerController@delete')
 
 
 
-//Route::get('/processData', 'PythonController@index');//Forma 1
+Route::get('processData/{ciudad}', 'App\Http\Controllers\PythonController@processData');//Forma 1
 //Route::get('/processData2', 'PythonController@index');//Forma 2
 //Route::get('/processData', [Controller::class, '/processData']);
 
