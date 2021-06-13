@@ -9,8 +9,8 @@ cur = myconn.cursor()
 
 sql = "insert into alquileres (nombre, descripcion, fotos, ubicacion, coste, especificaciones) values (%s, %s, %s, %s, %s, %s)"
 
-#provincia = "valladolid"#TODO SEÑALAR CIUDAD
-ciudad = "getafe"#TODO SEÑALAR PROVINCIA, no es necesario
+#provincia = "valladolid"
+ciudad = sys.argv[1] #TODO SEÑALAR CIUDAD
 page = requests.get('https://www.spainhouses.net/es/'+ciudad)#+'/'+provincia)
 soup = BeautifulSoup(page.content, 'html.parser')
 #print(soup.prettify())
