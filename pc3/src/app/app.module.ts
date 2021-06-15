@@ -25,6 +25,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { AuthHeaderInterceptor } from './shared/auth-header.interceptor';
 import { SignupComponent } from './signup/signup.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { ExamenComponent } from './examen/examen.component';
 
 
 
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'app-signup', component:SignupComponent},
   { path: 'app-usuario', component:UsuarioComponent},
   { path: 'app-board-user', component:BoardUserComponent},
+  { path: 'app-examen', component:ExamenComponent},
   { path: '', redirectTo : '/app-search', pathMatch: 'full'},
   { path: '', redirectTo : '/app-users', pathMatch: 'full'},
   { path: '', redirectTo : '/app-login', pathMatch: 'full'},
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
   { path: '', redirectTo : '/app-article', pathMatch: 'full'},
   { path: '', redirectTo : '/app-formulario', pathMatch: 'full'},
   { path: '', redirectTo : '/app-board-user', pathMatch: 'full'},
-  { path: '', redirectTo : '/app-signup', pathMatch: 'full'}
+  { path: '', redirectTo : '/app-signup', pathMatch: 'full'},
+  { path: '', redirectTo : '/app-examen', pathMatch: 'full'}
 ];
 @NgModule({
   declarations: [
@@ -63,7 +66,8 @@ const appRoutes: Routes = [
     FilterPipe,
     UsuarioComponent,
     SignupComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    ExamenComponent,
   ],
   imports: [
     BrowserModule,

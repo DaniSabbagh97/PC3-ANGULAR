@@ -2,7 +2,7 @@
 <div id="slider" class="slider-big">
 <div class="buscado">
 <mat-form-field> 
-    <input [formControl]="search" matInput placeholder="Buscador" [(ngModel)]="filterpost"
+    <input [formControl]="search" matInput placeholder="Busca un destino que visitar" [(ngModel)]="filterpost"
     (keydown.enter) = "getScrapper()" (keydown.enter) = "getMunicipio()"
     (keydown.enter) = "getAlquilerUbi()" (keydown.enter) = "getScrapper2()"
     (keydown.enter) = "getScrapper3()" name="filterpost"/>
@@ -36,6 +36,7 @@
     </tbody>
   </table>
 </div>-->
+<!--
 <br>
 <div class="container">
   <table class="table table-bordered">
@@ -64,7 +65,12 @@
     </tbody>
   </table>
 </div>
+-->
 
-
-
-
+<div class="container" *ngFor="let alq of ltsAlquiler | filter: filterpost">
+  <h1 class="check">{{ alq.nombre }}</h1>
+  <img src="{{ alq.fotos }}">
+  <p class="texto">{{ alq.descripcion }}</p>
+  <p class="texto">{{ alq.ubicacion }}</p>
+  <p class="texto">{{ alq.coste }}</p> 
+</div>

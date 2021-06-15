@@ -20,8 +20,8 @@ body{
     text-align: center;
     margin: 0px;
     padding: 0px;
-    font-family: Roboto;
-    background:white;
+    font-family: 'Times New Roman', Times, serif;
+    background:#B9D4FF;
     
 }
 
@@ -29,9 +29,9 @@ body{
     border: 1px solid black;
     height: 120px;
     width: 100%;
-    background: white;
+    background-color: #B9D4FF;
     border-bottom: 1px solid;
-    border-top: 5px solid #96cc2a;
+    border-top: 5px solid #B9D4FF;
 }
 
 .center{
@@ -74,7 +74,7 @@ body{
     width: 50%;
     min-height: 70px;
     margin: 30px auto;
-    font-family: Roboto;
+    font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -107,7 +107,7 @@ body{
 }
 
 #menu a:hover{
-    color: #99c546
+    color: #3169C3;
 }
 
 #slider{
@@ -118,10 +118,10 @@ body{
     color: white;
     /*text-shadow: 0px 0px 5px #444;*/
     font-size: 26px;
-    background: #dbff93;
+    background: #B9D4FF;
 
     /* DEGRADADO CSS*/
-
+/*
 background: rgba(249,255,82,1);
 background: -moz-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,255,82,1)), color-stop(79%, rgba(193,234,66,1)), color-stop(91%, rgba(184,231,64,1)));
@@ -130,7 +130,7 @@ background: -o-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 7
 background: -ms-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: linear-gradient(to right, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', endColorstr='#b8e740', GradientType=1 );
-    
+    */
 }
 
 #slider h1{
@@ -304,4 +304,4 @@ height: 300px;
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Times New Roman', Times, serif, "Helvetica Neue", sans-serif; }
