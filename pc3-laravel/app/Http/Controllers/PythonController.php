@@ -25,7 +25,7 @@ class PythonController extends Controller
     //     //$python = "C:\Users\Dani\AppData\Local\Programs\Python\Python39\python.exe";//Cambiar python a ruta relativa y meterlo en el proyecto
     //     $cmd = $python." ".'D:\PCII y PCIII\proyecto\PC3-ANGULAR\pc3-laravelDISCOD\app\Python\prueba.py';
     //     //D:\PCII y PCIII\proyecto\PC3-ANGULAR\pc3-laravelDISCOD\app\Python\prueba.py
-         $pythonDavid ="C:/Users/david_000/AppData/Local/Microsoft/WindowsApps/python3.8.exe";
+         $pythonDavid ="C:\Users\sandr\AppData\Local\Programs\Python\Python39\python.exe";
          $cmd =$pythonDavid." ".base_path("app/Http/Python/EscapadaRuralBusqueda.py").' ' . $ciudad;
          $ans = shell_exec($cmd);
          return $ans;
@@ -51,7 +51,7 @@ class PythonController extends Controller
     //             base_path('app\python\vaciada.py')
 
     //         ]);
-    $pythonDavid ="C:/Users/david_000/AppData/Local/Microsoft/WindowsApps/python3.8.exe";
+    $pythonDavid ="C:\Users\sandr\AppData\Local\Programs\Python\Python39\python.exe";
     $cmd =$pythonDavid." ".base_path("app/Http/Python/SpainHousesBusqueda.py").' ' . $municipio;
     
     $ans = shell_exec($cmd);

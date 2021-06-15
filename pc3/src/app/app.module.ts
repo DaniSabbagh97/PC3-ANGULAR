@@ -25,6 +25,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { AuthHeaderInterceptor } from './shared/auth-header.interceptor';
 import { SignupComponent } from './signup/signup.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { CopiaSearchComponent } from './copia-search/copia-search.component';
 
 
 
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   { path: 'app-article', component:ArticleComponent},
   { path: 'app-signup', component:SignupComponent},
   { path: 'app-usuario', component:UsuarioComponent},
+  { path: 'app-copia-search', component:CopiaSearchComponent},
   { path: 'app-board-user', component:BoardUserComponent},
   { path: '', redirectTo : '/app-search', pathMatch: 'full'},
   { path: '', redirectTo : '/app-users', pathMatch: 'full'},
@@ -63,7 +65,8 @@ const appRoutes: Routes = [
     FilterPipe,
     UsuarioComponent,
     SignupComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    CopiaSearchComponent
   ],
   imports: [
     BrowserModule,

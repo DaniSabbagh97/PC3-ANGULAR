@@ -76,8 +76,8 @@ for link in article:
     texto = texto +' ' + i.text
   textos.append(texto)
 
-modelo = cargarModelo('C:/Users/sandr/OneDrive/Escritorio/GitHub/PC3-ANGULAR/pc3-laravel/app/Http/Python/modelo.pkl')
-matriz = cargarMatriz('C:/Users/sandr/OneDrive/Escritorio/GitHub/PC3-ANGULAR/pc3-laravel/app/Http/Python/matriz.pkl')
+modelo = cargarModelo('C:\Users\sandr\Desktop\Github\PC3-ANGULAR\pc3-laravel\app\Http\Python\modelo.pkl')
+matriz = cargarMatriz('C:\Users\sandr\Desktop\Github\PC3-ANGULAR\pc3-laravel\app\Http\Python\matriz.pkl')
 limpito = limpiarArchivos(textos)
 corto = tokenizacion(limpito)
 matriz_test =  matrizNumericaTest(corto, matriz)
