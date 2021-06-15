@@ -21,7 +21,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Roboto;
-    background:white;
+    background:#FCD386;
     
 }
 
@@ -29,7 +29,7 @@ body{
     border: 1px solid black;
     height: 120px;
     width: 100%;
-    background: white;
+    background: rgb(211, 50, 50);
     border-bottom: 1px solid;
     border-top: 5px solid #96cc2a;
 }
@@ -118,18 +118,18 @@ body{
     color: white;
     /*text-shadow: 0px 0px 5px #444;*/
     font-size: 26px;
-    background: #dbff93;
+    background: #f249f8;
 
     /* DEGRADADO CSS*/
 
-background: rgba(249,255,82,1);
+background: rgb(212, 36, 168);
 background: -moz-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,255,82,1)), color-stop(79%, rgba(193,234,66,1)), color-stop(91%, rgba(184,231,64,1)));
 background: -webkit-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: -o-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
 background: -ms-linear-gradient(left, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
-background: linear-gradient(to right, rgba(249,255,82,1) 0%, rgba(193,234,66,1) 79%, rgba(184,231,64,1) 91%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', endColorstr='#b8e740', GradientType=1 );
+background: linear-gradient(to right, rgb(243, 188, 175) 0%, rgb(241, 129, 101) 79%, rgb(255, 158, 93) 91%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F5A8FA', endColorstr='#F121FE', GradientType=1 );
     
 }
 
@@ -161,17 +161,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', end
 
 .btn-white:hover{
 
-    background: rgb(109, 228, 80);/*CAMBIAR HOVER*/
-    color: white;
+    background: rgb(187, 126, 28);/*CAMBIAR HOVER*/
+    color: rgb(245, 42, 184)
 
 }
 
 #footer{
-    background: #f7f7f7;
+    background: #f645d9;
     width: 100%;
     height: 70px;
     line-height: 70px;
-    color: #444;
+    color: rgb(240, 124, 58);
 }
 
 #footer p{
@@ -196,12 +196,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ff52', end
 }
 
 .btn-success{
-    background:#96cc2a;/*CAMBIAR HOVER*/
+    background:#f342c7;/*CAMBIAR HOVER*/
 
 }
 .btn-success:hover{
 
-    background: rgb(46, 219, 89);/*CAMBIAR HOVER*/
+    background: rgb(226, 96, 172);/*CAMBIAR HOVER*/
 }
 
 input[type="text"]{
@@ -271,7 +271,7 @@ input[type="text"]:focus{
 
 .article-item a{
     display: block;
-    color: #444;
+    color: rgb(112, 185, 228);
     text-decoration: none;
     margin-top: 10px;
 }
