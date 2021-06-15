@@ -5,6 +5,7 @@ import { AuthService } from '../shared/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Alquiler } from '../alquiler.model';
 import { Localidad } from '../localidad.model';
+import { User } from '../user.model';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -24,6 +25,7 @@ export class SearchComponent implements OnInit {
 
   ltsAlquiler:Alquiler[] = [];
   ltsLocalidad:Localidad[] = [];
+  usuarios:User[] = [];
 
   /*Vamos a decir el buscador nos de por la consola de Google el tecleo que se ha utilizado*/ 
   // ngOnInit():void { 
@@ -40,7 +42,7 @@ export class SearchComponent implements OnInit {
   //   this.getAlquiler(this.route.snapshot.paramMap.get('id'));
   // }
   ngOnInit():void{
-    
+    this.getUsuarios();
   }
   currentAlquiler = null;
   currentLocalidad = null;
@@ -109,9 +111,15 @@ export class SearchComponent implements OnInit {
     })
   }
 
+  getUsuarios(): void{
+    this.data.getUsers().subscribe(res => {
+      this.usuarios = res;
+      console.log(this.usuarios)
+    })
+  }
+
   search = new FormControl('')
 
   @Output('search') searchEmitter = new EventEmitter<string>()
 
 }
-
