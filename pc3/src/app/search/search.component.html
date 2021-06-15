@@ -1,5 +1,6 @@
 <!--Creación del buscador y creación del botón-->
-<div id="slider" class="slider-big">
+<div id="fondoBonico">
+<div id="sliderojo" class="slider-big">
 <div class="buscado">
 <mat-form-field> 
     <input [formControl]="search" matInput placeholder="Buscador" [(ngModel)]="filterpost"
@@ -37,34 +38,22 @@
   </table>
 </div>-->
 <br>
-<div class="container">
-  <table class="table table-bordered">
-    <tbody>
-      <tr *ngIf="this.localidad.municipio != null">
-        <td>{{this.localidad.municipio}}</td>
-        <td>{{this.localidad.comarca}}</td>
-        <td>{{this.localidad.provincia}}</td>
-        <td>{{this.localidad.CCAA}}</td>
-        <td>{{this.numeroVaciada}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <table class="table table-bordered">
-    <tbody>
-      <tr *ngFor="let alq of ltsAlquiler | filter: filterpost">
-        <td><img src="{{alq.fotos}}"></td>
-        <td>{{alq.nombre}}</td>
-        <td>{{alq.ubicacion}}</td>
-        <td>{{alq.coste}}</td>
-        <td>{{alq.especificaciones}}</td>
-       <td><button (click)= "verAlquileres(alq.id)">Pulse aqui</button></td>
-      </tr>
-    </tbody>
-  </table>
+
+<div class="container"  id="espacio">
+  
+    
+      <div *ngFor="let alq of ltsAlquiler | filter: filterpost">
+        <p><img src="{{alq.fotos}}"></p>
+        <h1>{{alq.nombre}}</h1>
+        <h2>{{alq.ubicacion}}</h2>
+        <p>{{alq.coste}}</p>
+        <p>{{alq.especificaciones}}</p>
+       <p>{{alq.descripcion}}</p>
+      </div>
+   
+  
 </div>
 
 
-
+</div>
 
