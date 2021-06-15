@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './component/app.component';
 import { SearchComponent } from './search/search.component';
 
+import { Search_oldComponent } from './search_old/search_old.component';
+
 /*Angular material*/
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +32,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 
 const appRoutes: Routes = [
   { path: 'app-search', component:SearchComponent},
+  { path: 'app-search_old', component:Search_oldComponent},
   //{ path: 'app-estructura/:municipio', component:EstructuraComponent},
   //{ path: 'app-estructura/:ubicacion', component:EstructuraComponent},
   { path: 'app-article/:id', component:ArticleComponent},
@@ -54,6 +57,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
+    Search_oldComponent,
     UsersComponent,
     NavbarComponent,
     LoginComponent,
