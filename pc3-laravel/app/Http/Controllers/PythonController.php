@@ -62,7 +62,7 @@ class PythonController extends Controller
     public function processData3($municipio)
     {
         //$pythonDavid ="C:\Users\david\AppData\Local\Microsoft\WindowsApps\python3.8.exe";
-        $pythonDavid ="C:/Users/david_000/AppData/Local/Microsoft/WindowsApps/python3.8.exe";
+        $pythonDavid ="C:\Users\sandr\AppData\Local\Programs\Python\Python39\python.exe";
         $cmd =$pythonDavid." ".base_path("app/Http/Python/vaciada.py").' ' . $municipio;
         
         $ans = shell_exec($cmd);
